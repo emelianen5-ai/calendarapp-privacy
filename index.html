@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プライバシーポリシー | Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 50%, #e1bee7 100%);
+      min-height: 100vh;
+      padding: 24px 16px 48px;
+      color: #4a4a4a;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 16px;
+    }
+    .lang-switch button {
+      background: rgba(255,255,255,0.7);
+      border: 1px solid #e0b4c8;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      color: #c06090;
+      font-weight: 600;
+    }
+    .lang-switch button:hover { background: rgba(255,255,255,0.95); }
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    header .app-icon { font-size: 48px; margin-bottom: 8px; }
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #b5477a;
+      margin-bottom: 4px;
+    }
+    header .subtitle {
+      font-size: 14px;
+      color: #c08090;
+    }
+    .card {
+      background: rgba(255,255,255,0.82);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(224,180,200,0.5);
+      box-shadow: 0 2px 12px rgba(180,100,130,0.08);
+    }
+    .card h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #b5477a;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f8bbd9;
+    }
+    .card p { font-size: 15px; line-height: 1.75; color: #555; margin-bottom: 10px; }
+    .card p:last-child { margin-bottom: 0; }
+    .card ul { padding-left: 20px; margin-top: 6px; }
+    .card ul li { font-size: 15px; line-height: 1.75; color: #555; margin-bottom: 4px; }
+    .highlight-box {
+      background: #fff0f5;
+      border-left: 4px solid #f06090;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      margin: 12px 0;
+    }
+    .highlight-box p { color: #a04060; font-weight: 600; margin: 0; }
+    .contact-box {
+      background: #fce4ec;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .contact-box p { color: #c06080; font-size: 14px; margin: 0; }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #c098a8;
+      margin-top: 24px;
+    }
+    /* English version hidden by default */
+    .en { display: none; }
+    .ja { display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="lang-switch">
+      <button onclick="switchLang()">English / 日本語</button>
+    </div>
+
+    <header>
+      <div class="app-icon">🌸</div>
+      <!-- Japanese -->
+      <div class="ja">
+        <h1>プライバシーポリシー</h1>
+        <p class="subtitle">カレンダーアプリ（CalendarApp）</p>
+      </div>
+      <!-- English -->
+      <div class="en">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">CalendarApp</p>
+      </div>
+    </header>
+
+    <!-- ===== JAPANESE ===== -->
+    <div class="ja">
+
+      <div class="card">
+        <h2>📋 はじめに</h2>
+        <p>カレンダーアプリ（以下「本アプリ」）をご利用いただきありがとうございます。本プライバシーポリシーは、本アプリにおける個人情報の取り扱いについて説明するものです。</p>
+        <div class="highlight-box">
+          <p>✅ 本アプリは、ユーザーのデータを外部サーバーへ送信しません。すべてのデータはお使いの端末の中にのみ保存されます。</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>📦 収集する情報</h2>
+        <p>本アプリは以下のデータをお使いの端末内にのみ保存します。</p>
+        <ul>
+          <li>スケジュール（予定のタイトル・日時）</li>
+          <li>タスク（やることリストの内容・完了状態）</li>
+          <li>家計簿（収入・支出の金額・メモ）</li>
+          <li>メモ（自由記述）</li>
+          <li>カスタム項目（体重記録・日記など自由に設定した内容）</li>
+          <li>アプリ設定（テーマ・言語・カスタム項目名）</li>
+        </ul>
+        <p style="margin-top:12px;">氏名・メールアドレス・電話番号・位置情報などの個人を特定できる情報は一切収集しません。</p>
+      </div>
+
+      <div class="card">
+        <h2>🔒 データの保存場所</h2>
+        <p>すべてのデータは、お使いのスマートフォン本体のローカルストレージ（AsyncStorage）に保存されます。</p>
+        <ul>
+          <li>本アプリの開発者はデータにアクセスできません</li>
+          <li>インターネットへの送信は行われません</li>
+          <li>第三者への提供は一切ありません</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>📊 アクセス解析・広告</h2>
+        <p>現在のバージョンでは、アクセス解析ツール（Google Analytics 等）および広告 SDK は導入していません。将来的に追加する場合は、本ポリシーを更新した上でアプリ内でご案内します。</p>
+      </div>
+
+      <div class="card">
+        <h2>🗑️ データの削除</h2>
+        <p>アプリ内の「設定」画面から「すべてのデータを削除」を実行することで、端末内のデータをすべて消去できます。また、アプリをアンインストールした場合も、すべてのデータは端末から削除されます。</p>
+      </div>
+
+      <div class="card">
+        <h2>👶 お子様のプライバシー</h2>
+        <p>本アプリは13歳未満のお子様を対象としたサービスではなく、13歳未満の方から意図的に情報を収集することはありません。</p>
+      </div>
+
+      <div class="card">
+        <h2>📝 ポリシーの変更</h2>
+        <p>本ポリシーを変更する場合は、本ページを更新します。重要な変更がある場合はアプリ内でもお知らせします。最終更新日をご確認ください。</p>
+        <p style="margin-top:8px; font-size:13px; color:#999;">最終更新日：2026年3月19日</p>
+      </div>
+
+      <div class="card">
+        <h2>📬 お問い合わせ</h2>
+        <p>本プライバシーポリシーに関するご質問やご意見は、下記よりお問い合わせください。</p>
+        <div class="contact-box">
+          <p>App Store / Google Play のレビュー欄、またはアプリ内お問い合わせフォームよりご連絡ください。</p>
+        </div>
+      </div>
+
+    </div><!-- /ja -->
+
+    <!-- ===== ENGLISH ===== -->
+    <div class="en">
+
+      <div class="card">
+        <h2>📋 Introduction</h2>
+        <p>Thank you for using CalendarApp. This Privacy Policy explains how we handle your information within this application.</p>
+        <div class="highlight-box">
+          <p>✅ CalendarApp does NOT transmit any user data to external servers. All data is stored locally on your device only.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>📦 Information We Collect</h2>
+        <p>CalendarApp stores only the following data locally on your device:</p>
+        <ul>
+          <li>Schedules (title and date/time of events)</li>
+          <li>Tasks (task content and completion status)</li>
+          <li>Household accounts (income/expense amounts and memos)</li>
+          <li>Memos (free text notes)</li>
+          <li>Custom entries (e.g., weight records, diary — content you define)</li>
+          <li>App settings (theme, language, custom item name)</li>
+        </ul>
+        <p style="margin-top:12px;">We do NOT collect any personally identifiable information such as your name, email address, phone number, or location.</p>
+      </div>
+
+      <div class="card">
+        <h2>🔒 Data Storage</h2>
+        <p>All data is stored in your device's local storage (AsyncStorage) only.</p>
+        <ul>
+          <li>Developers cannot access your data</li>
+          <li>No data is transmitted over the internet</li>
+          <li>No data is shared with third parties</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>📊 Analytics &amp; Advertising</h2>
+        <p>The current version does not include any analytics tools (such as Google Analytics) or advertising SDKs. If these are added in future versions, this policy will be updated and users will be notified in-app.</p>
+      </div>
+
+      <div class="card">
+        <h2>🗑️ Data Deletion</h2>
+        <p>You can delete all data stored on your device by using "Delete All Data" in the app's Settings screen. Uninstalling the app will also remove all data from your device.</p>
+      </div>
+
+      <div class="card">
+        <h2>👶 Children's Privacy</h2>
+        <p>CalendarApp is not directed at children under the age of 13, and we do not knowingly collect information from children under 13.</p>
+      </div>
+
+      <div class="card">
+        <h2>📝 Changes to This Policy</h2>
+        <p>We may update this policy from time to time. Please check the "Last updated" date below. Significant changes will also be announced within the app.</p>
+        <p style="margin-top:8px; font-size:13px; color:#999;">Last updated: March 19, 2026</p>
+      </div>
+
+      <div class="card">
+        <h2>📬 Contact</h2>
+        <p>If you have any questions about this Privacy Policy, please reach out via:</p>
+        <div class="contact-box">
+          <p>App Store / Google Play review section, or the in-app contact form.</p>
+        </div>
+      </div>
+
+    </div><!-- /en -->
+
+    <footer>
+      <p>© 2026 CalendarApp. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    var currentLang = 'ja';
+    function switchLang() {
+      currentLang = currentLang === 'ja' ? 'en' : 'ja';
+      var jaEls = document.querySelectorAll('.ja');
+      var enEls = document.querySelectorAll('.en');
+      jaEls.forEach(function(el) { el.style.display = currentLang === 'ja' ? 'block' : 'none'; });
+      enEls.forEach(function(el) { el.style.display = currentLang === 'en' ? 'block' : 'none'; });
+      document.documentElement.lang = currentLang;
+    }
+  </script>
+</body>
+</html>
