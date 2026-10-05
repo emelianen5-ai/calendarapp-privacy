@@ -122,31 +122,36 @@
         <h2>📋 はじめに</h2>
         <p>Qualef（開発者）が提供する「可愛い家計簿カレンダー」（英語名：Cute Budget Calendar、Android パッケージ名：com.takuyayamaguchi.calendarapp、以下「本アプリ」）をご利用いただきありがとうございます。本プライバシーポリシーは、本アプリにおける個人情報の取り扱いについて説明するものです。</p>
         <div class="highlight-box">
-          <p>✅ 本アプリは、ユーザーのデータを外部サーバーへ送信しません。すべてのデータはお使いの端末の中にのみ保存されます。</p>
+          <p>✅ 記録はお使いの端末に保存されます。iPhone・iPad・対応する Mac で iCloud 同期や帳簿の共有を使うと、その帳簿は Apple の iCloud にも保存されます。開発者が運営するサーバーへ記録を送信することはありません。</p>
         </div>
       </div>
 
       <div class="card">
         <h2>📦 収集する情報</h2>
-        <p>本アプリは以下のデータをお使いの端末内にのみ保存します。</p>
+        <p>本アプリは以下のデータを保存します。開発者がこれらを収集することはありません。</p>
         <ul>
-          <li>スケジュール（予定のタイトル・日時）</li>
+          <li>帳簿（帳簿名と、帳簿ごとの記録）</li>
+          <li>スケジュール（予定のタイトル・日時・メモ）</li>
           <li>タスク（やることリストの内容・完了状態）</li>
-          <li>家計簿（収入・支出の金額・メモ）</li>
+          <li>家計簿（収入・支出の金額・カテゴリ・メモ）</li>
           <li>メモ（自由記述）</li>
           <li>カスタム項目（体重記録・日記など自由に設定した内容）</li>
-          <li>アプリ設定（テーマ・言語・カスタム項目名）</li>
+          <li>同期のための管理情報（削除した項目の識別子と日時など）</li>
+          <li>アプリ設定（テーマ・言語・カスタム項目名。端末ごとに保存し、同期しません）</li>
         </ul>
-        <p style="margin-top:12px;">氏名・メールアドレス・電話番号・位置情報などの個人を特定できる情報は一切収集しません。</p>
+        <p style="margin-top:12px;">氏名・メールアドレス・電話番号・位置情報などの入力を求めることはなく、開発者独自のアカウント登録も不要です。自由記述欄に入力した内容は、その帳簿の記録として保存・同期・共有されます。</p>
       </div>
 
       <div class="card">
         <h2>🔒 データの保存場所</h2>
-        <p>すべてのデータは、お使いのスマートフォン本体のローカルストレージ（AsyncStorage）に保存されます。</p>
+        <p>記録はお使いの端末のローカルストレージ（AsyncStorage）に保存されます。iPhone・iPad・対応する Mac のアプリでは、帳簿ごとに Apple の CloudKit を使った iCloud 同期と共有を任意で利用できます。</p>
         <ul>
-          <li>本アプリの開発者はデータにアクセスできません</li>
-          <li>インターネットへの送信は行われません</li>
-          <li>第三者への提供は一切ありません（広告配信に必要な情報を除く。詳細は「広告について」をご覧ください）</li>
+          <li>「iCloud 同期」を有効にした帳簿は、お使いの Apple Account の iCloud に保存され、同じ Apple Account の端末間で同期されます</li>
+          <li>帳簿を共有すると、その帳簿の記録（予定・タスク・収支・メモ・カスタム項目）は所有者の iCloud に保存され、招待された参加者が所有者の指定した権限で閲覧・編集できます。ほかの帳簿は共有されません</li>
+          <li>参加者が書き出したり端末に保存したりしたコピーは、共有の終了後も参加者の手元に残る場合があります</li>
+          <li>iCloud 上のデータは Apple が管理し、<a href="https://www.apple.com/legal/privacy/" target="_blank" style="color:#b5477a;">Apple のプライバシーポリシー</a>に従って取り扱われます。開発者は帳簿の内容を閲覧できません</li>
+          <li>Android 版には iCloud 同期・共有はなく、記録は端末内にのみ保存されます</li>
+          <li>第三者への提供はありません（広告配信に必要な情報を除く。詳細は「広告について」をご覧ください）</li>
         </ul>
       </div>
 
@@ -168,9 +173,8 @@
         <h2>🔔 通知について</h2>
         <p>本アプリは、登録した予定のリマインダーとしてローカル通知機能を提供しています。</p>
         <ul>
-          <li>通知はすべてお使いの端末内で生成・発火します</li>
-          <li>通知のために外部サーバーやプッシュ通知サービスは利用しません</li>
-          <li>プッシュ通知トークン（APNs / FCM）は発行・送信しません</li>
+          <li>予定のリマインダーはお使いの端末内で生成・発火し、外部サーバーは利用しません</li>
+          <li>iOS 版で iCloud 同期・共有を使う場合のみ、ほかの端末での変更を受け取るために Apple のプッシュ通知サービス（画面に表示されないサイレント通知）を利用します。そのための端末トークンは Apple が管理し、開発者には送信されません</li>
           <li>通知本文にはアプリ内で入力した予定のタイトルのみが含まれ、端末外には一切送信されません</li>
           <li>通知の有効/無効、通知時刻はユーザーが設定画面から任意に変更できます</li>
         </ul>
@@ -179,18 +183,21 @@
 
       <div class="card">
         <h2>💎 アプリ内課金について</h2>
-        <p>本アプリは広告を非表示にする一度限りのアプリ内課金（買い切り）を提供しています。</p>
+        <p>iOS 版では、次の一度限りのアプリ内課金（買い切り）を提供しています。</p>
         <ul>
+          <li>「広告を削除」：アプリ内の広告を非表示にします</li>
+          <li>「共有帳簿」：帳簿の共有を始められるようにします（招待された参加者は購入不要です）</li>
           <li>課金処理はすべて Apple App Store の決済システムを通じて行われます</li>
           <li>本アプリは決済情報・クレジットカード情報・Apple ID 等を取得・保存・送信しません</li>
-          <li>課金完了後、お使いの端末内に「広告を非表示にする」設定値（true / false）のみが保存されます</li>
-          <li>機種変更時は Apple の「購入を復元」機能で購入状態を引き継げます。本アプリは復元処理においても個人情報を取得しません</li>
+          <li>広告の非表示はお使いの端末内の設定値（true / false）として保存され、共有帳簿の購入状態は Apple の購入履歴から確認します</li>
+          <li>機種変更時は「購入と復元」から購入状態を引き継げます。本アプリは復元処理においても個人情報を取得しません</li>
         </ul>
       </div>
 
       <div class="card">
         <h2>🗑️ データの削除</h2>
-        <p>アプリ内の「設定」画面から「すべてのデータを削除」を実行することで、端末内のデータをすべて消去できます。また、アプリをアンインストールした場合も、すべてのデータは端末から削除されます。</p>
+        <p>記録は項目ごとに削除できます。端末内にだけある追加の帳簿は、設定の帳簿の管理から帳簿ごと削除できます。アプリをアンインストールすると、端末内のデータは削除されます。</p>
+        <p>iCloud 同期中の帳簿で削除した内容は、同期先の端末と共有の参加者にも反映されます。アンインストールしても iCloud 上のデータは削除されません。iCloud 上のデータは、お使いの端末の iCloud の設定から管理・削除できます。参加者は共有帳簿から退出でき、所有者は共有を終了できます（所有者の記録は個人の帳簿として残ります）。</p>
       </div>
 
       <div class="card">
@@ -201,7 +208,7 @@
       <div class="card">
         <h2>📝 ポリシーの変更</h2>
         <p>本ポリシーを変更する場合は、本ページを更新します。重要な変更がある場合はアプリ内でもお知らせします。最終更新日をご確認ください。</p>
-        <p style="margin-top:8px; font-size:13px; color:#999;">最終更新日：2026年9月19日</p>
+        <p style="margin-top:8px; font-size:13px; color:#999;">最終更新日：2026年10月6日</p>
       </div>
 
       <div class="card">
@@ -221,30 +228,35 @@
         <h2>📋 Introduction</h2>
         <p>This Privacy Policy applies to Cute Budget Calendar (Japanese name: 可愛い家計簿カレンダー), developed and provided by Qualef. The Android package name is com.takuyayamaguchi.calendarapp. This Privacy Policy explains how we handle your information within this application.</p>
         <div class="highlight-box">
-          <p>✅ Cute Budget Calendar does NOT transmit any user data to external servers. All data is stored locally on your device only.</p>
+          <p>✅ Your records are stored on your device. If you use iCloud sync or ledger sharing on iPhone, iPad or a supported Mac, that ledger is also stored in Apple's iCloud. Your records are never sent to any server operated by the developer.</p>
         </div>
       </div>
 
       <div class="card">
         <h2>📦 Information We Collect</h2>
-        <p>Cute Budget Calendar stores only the following data locally on your device:</p>
+        <p>Cute Budget Calendar stores the following data. The developer does not collect any of it.</p>
         <ul>
-          <li>Schedules (title and date/time of events)</li>
+          <li>Ledgers (ledger names and the records in each ledger)</li>
+          <li>Schedules (title, date/time and memo of events)</li>
           <li>Tasks (task content and completion status)</li>
-          <li>Household accounts (income/expense amounts and memos)</li>
+          <li>Household accounts (income/expense amounts, categories and memos)</li>
           <li>Memos (free text notes)</li>
           <li>Custom entries (e.g., weight records, diary — content you define)</li>
-          <li>App settings (theme, language, custom item name)</li>
+          <li>Sync bookkeeping (such as identifiers and times of deleted items)</li>
+          <li>App settings (theme, language, custom item name; kept on each device and not synced)</li>
         </ul>
-        <p style="margin-top:12px;">We do NOT collect any personally identifiable information such as your name, email address, phone number, or location.</p>
+        <p style="margin-top:12px;">The app never asks for your name, email address, phone number or location, and no developer account is required. Anything you type into free-text fields is stored, synced and shared as part of that ledger.</p>
       </div>
 
       <div class="card">
         <h2>🔒 Data Storage</h2>
-        <p>All data is stored in your device's local storage (AsyncStorage) only.</p>
+        <p>Records are stored in your device's local storage (AsyncStorage). On iPhone, iPad and supported Macs, you can optionally use iCloud sync and sharing for each ledger through Apple's CloudKit.</p>
         <ul>
-          <li>Developers cannot access your data</li>
-          <li>No data is transmitted over the internet</li>
+          <li>A ledger with iCloud sync turned on is stored in the iCloud of your Apple Account and synced across devices signed in to the same Apple Account</li>
+          <li>When you share a ledger, its records (events, tasks, income and expenses, memos and custom entries) are stored in the owner's iCloud, and invited participants can view or edit them with the permission the owner chose. Other ledgers are not shared</li>
+          <li>Copies that a participant exports or keeps on their device may remain with them after sharing ends</li>
+          <li>Data in iCloud is handled by Apple under <a href="https://www.apple.com/legal/privacy/" target="_blank" style="color:#b5477a;">Apple's Privacy Policy</a>. The developer cannot view the contents of your ledgers</li>
+          <li>The Android version has no iCloud sync or sharing; its records are stored on the device only</li>
           <li>No data is shared with third parties (except information required for ad delivery; see "Advertising" section for details)</li>
         </ul>
       </div>
@@ -267,9 +279,8 @@
         <h2>🔔 Notifications</h2>
         <p>The app provides local notification reminders for scheduled events.</p>
         <ul>
-          <li>All notifications are generated and triggered on your device only</li>
-          <li>No external servers or push notification services are used</li>
-          <li>No push notification tokens (APNs / FCM) are issued or transmitted</li>
+          <li>Event reminders are generated and triggered on your device; no external server is used</li>
+          <li>Only when you use iCloud sync or sharing on iOS, the app uses Apple's push notification service (silent notifications that are never shown) to receive changes made on other devices. The device token for this is managed by Apple and is never sent to the developer</li>
           <li>Notification content includes only the event title you entered in the app; it is never sent off-device</li>
           <li>You can enable/disable notifications and set notification times at any time from the Settings screen</li>
         </ul>
@@ -278,18 +289,21 @@
 
       <div class="card">
         <h2>💎 In-App Purchases</h2>
-        <p>The app offers a one-time in-app purchase to remove ads.</p>
+        <p>The iOS version offers the following one-time in-app purchases:</p>
         <ul>
+          <li>"Remove Ads": hides the ads in the app</li>
+          <li>"Shared Ledgers": lets you start sharing a ledger (invited participants do not need to buy it)</li>
           <li>All payment processing is handled by the Apple App Store payment system</li>
           <li>The app does not collect, store, or transmit any payment information, credit card information, or Apple ID</li>
-          <li>After purchase, only a boolean flag ("ads removed" true/false) is stored on your device</li>
-          <li>On a new device, you can restore your purchase using Apple's "Restore Purchases" feature. The app does not collect any personal information during restoration</li>
+          <li>Ad removal is stored on your device as a true/false flag; the Shared Ledgers purchase is checked against your Apple purchase history</li>
+          <li>On a new device, you can restore your purchases from "Purchases &amp; restore". The app does not collect any personal information during restoration</li>
         </ul>
       </div>
 
       <div class="card">
         <h2>🗑️ Data Deletion</h2>
-        <p>You can delete all data stored on your device by using "Delete All Data" in the app's Settings screen. Uninstalling the app will also remove all data from your device.</p>
+        <p>You can delete records one by one. An extra ledger that exists only on your device can be deleted as a whole from ledger management in Settings. Uninstalling the app removes the data stored on your device.</p>
+        <p>Deletions in a ledger with iCloud sync are reflected on your other devices and for sharing participants. Uninstalling does not delete data in iCloud; you can manage and delete it in your device's iCloud settings. Participants can leave a shared ledger, and the owner can stop sharing (the owner's records remain as a personal ledger).</p>
       </div>
 
       <div class="card">
@@ -300,7 +314,7 @@
       <div class="card">
         <h2>📝 Changes to This Policy</h2>
         <p>We may update this policy from time to time. Please check the "Last updated" date below. Significant changes will also be announced within the app.</p>
-        <p style="margin-top:8px; font-size:13px; color:#999;">Last updated: September 19, 2026</p>
+        <p style="margin-top:8px; font-size:13px; color:#999;">Last updated: October 6, 2026</p>
       </div>
 
       <div class="card">
